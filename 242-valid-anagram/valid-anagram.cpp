@@ -7,15 +7,15 @@ public:
             return false;
         }
 
-        int freq[26];
+        unordered_map <int,int> mp;
 
         for(int i=0;i<x;i++){
-            freq[s[i]-'a']++;
-            freq[t[i]-'a']--;
+            mp[s[i]-'a']++;
+            mp[t[i]-'a']--;
         }
 
         for(int i=0;i<26;i++){
-            if(freq[i]!=0){
+            if(mp[i]!=0){
                 return false;
             }
         }
