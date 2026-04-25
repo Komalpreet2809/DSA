@@ -6,8 +6,10 @@ class Solution(object):
         :rtype: List[int]
         """
         n=len(nums)
-        for i in range(0,n):
-            for j in range(i+1,n):
-                if(nums[i]+nums[j]==target):
-                    return [i,j]
+        a={}
+        for i,num in enumerate(nums):
+            comp=target-num
+            if comp in a:
+                return [a[comp],i]
+            a[num]=i    
         
