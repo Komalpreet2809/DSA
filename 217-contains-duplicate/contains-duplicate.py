@@ -5,8 +5,9 @@ class Solution(object):
         :rtype: bool
         """
         n=len(nums)
-        nums.sort()
-        for i in range(1,n):
-            if nums[i]==nums[i-1]:
+        a=set()
+        for num in nums:
+            if num in a:
                     return True
+            a.add(num)
         return False
