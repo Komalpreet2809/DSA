@@ -11,5 +11,4 @@ class Solution(object):
             comp=target-num
             if comp in a:
                 return [a[comp],i]
-            a[num]=i    
-        
+            a[num]=i
